@@ -4,6 +4,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    allowedHosts: true, // allow all hosts (for e2b preview)
+  },
   plugins: [
     reactRouter(),
     tsconfigPaths(),
